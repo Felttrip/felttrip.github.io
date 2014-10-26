@@ -2,7 +2,7 @@
 layout: post
 title:  "Blog init"
 date:   2014-10-26
-categories: first post
+categories: first_post
 ---
 
 `$ blog init`
