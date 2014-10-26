@@ -1,0 +1,13 @@
+# Site settings
+title: A Day In The Woods
+email: nthompson55@gmail.com
+description: >
+  Nate Thompson's blog on a variety of topics. 
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://natethompson.me" # the base hostname & protocol for your site
+
+linkedin_username: thompsonnathaniel
+github_username: felttrip
+author: by Nate Thompson
+# Build settings
+markdown: kramdown
