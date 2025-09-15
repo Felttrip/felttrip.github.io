@@ -20,12 +20,12 @@ I've recently acquired a high quality table saw, which would make ripping down s
 
 # Initial designs
 I started with a very rough idea of what I wanted to accomplish here, with the intention of iterating on the design as I started building it. The extent of my planning is these two sketches below. 
-![Expression]({{ "/assets/images/chuck_box/design_1.jpg" | relative_url }})
-![Expression]({{ "/assets/images/chuck_box/design_2.jpg" | relative_url }})
+![Front and side drawings of the chuck box plans in a dot grid notebook.]({{ "/assets/images/chuck_box/design_1.jpg" | relative_url }})
+![Internal view drawings of the chuck box plans in a dot grid notebook showing the rails for the storage bins.]({{ "/assets/images/chuck_box/design_2.jpg" | relative_url }})
 
 ## Organization
 The size and shape of the design was primarily driven by the size and shape of these plastic bus bins that would be the backbone of the organization system.
-![Expression]({{ "/assets/images/chuck_box/bus_bins.jpg" | relative_url }})
+![A stack of 4 grey plastic bus bins]({{ "/assets/images/chuck_box/bus_bins.jpg" | relative_url }})
 
 The plan was to have two on the left side to act as drawers of sorts and one on the right side to contain all of the taller items.
 
@@ -45,21 +45,21 @@ The general idea would be that I would frame out a lightweight box with thin str
 # Construction
 Unfortunately I didn't have nice strips of 1/2"x1/2" which would have been my preferred material for the bones, but what I did have was a random piece of scrap 9/16" plywood and a table saw. 
 Ripping them down into strips yielded plenty of material to experiment with.
-![Expression]({{ "/assets/images/chuck_box/bones.jpg" | relative_url }})
+![A pile of strips of cut plywood.]({{ "/assets/images/chuck_box/bones.jpg" | relative_url }})
 
 Next I constructed two boxes that would make up the right and left sides of the box. 
-![Expression]({{ "/assets/images/chuck_box/box_sides.jpg" | relative_url }})
+![Two rectangles created with strips of plywood held together with angle clamps.]({{ "/assets/images/chuck_box/box_sides.jpg" | relative_url }})
 
 This is where I made my first mistake that will be resolved in v2 of this chuck box. The boxes I framed out here are the area _below_ the shelf that will hold the stove. This would require me to make a small extension to this framing to have the full height of the box. In an effort to cut as much weight as possible I only framed out 3/4 of the top box which made getting the top portion squared up extremely difficult.
 
 Next the initial frame up could occur. I used a slightly thicker piece of plywood for the bottom to add strength, and 1/8" plywood for the top shelf. I was initially concerned about bowing in the middle of the shelf when the stove would be sitting on it but the center support pieces in the middle of the box added enough rigidity to make it work perfectly. 
-![Expression]({{ "/assets/images/chuck_box/frame_up.jpg" | relative_url }})
+![A box with no sides created with plywood strip rectangles and thin plywood]({{ "/assets/images/chuck_box/frame_up.jpg" | relative_url }})
 
 Several steps are missing here as I struggled to get the top of the box attached securely and squared up. Once that was attached I was able to cut panels to sheath the sides and top of the chuck box. 
-![Expression]({{ "/assets/images/chuck_box/success.jpg" | relative_url }})
+![A box with no front created with plywood strips and thin plywood.]({{ "/assets/images/chuck_box/success.jpg" | relative_url }})
 
 This may look like a big jump in steps but its really only painting, attaching the front door, and loading up the chuck box.
-![Expression]({{ "/assets/images/chuck_box/painted.jpg" | relative_url }})
+![A green chuck box with camping items stored inside.]({{ "/assets/images/chuck_box/painted.jpg" | relative_url }})
 
 All in all very happy with how the storage ended up working out and the end weight of the empty chuck box (18lbs) is much more manageable. In addition to being lighter it is also smaller in every dimension than my previous build.
 
@@ -69,7 +69,7 @@ The bins are roughly divided into three categories.
 - Cooking utensils
 - Pots, pans, and tall things
 
-![Expression]({{ "/assets/images/chuck_box/storage.jpg" | relative_url }})
+![A green chuck box with the storage drawers pulled out showing the contents of the box.]({{ "/assets/images/chuck_box/storage.jpg" | relative_url }})
 
 All in all I'm very happy with the prototype and feel like I have lots of small improvements for the construction of v2.
 

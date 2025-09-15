@@ -12,3 +12,8 @@ author: by Nate Thompson
 # Build settings
 markdown: kramdown
 future: true
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true

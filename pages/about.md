@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-#Hi, I'm Nate.#
+# Hi, I'm Nate.
 
 I'm a tinkerer, an adventure, and a builder.
 
