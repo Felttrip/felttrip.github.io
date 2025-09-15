@@ -11,3 +11,4 @@ github_username: felttrip
 author: by Nate Thompson
 # Build settings
 markdown: kramdown
+future: true
