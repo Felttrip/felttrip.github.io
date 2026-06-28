@@ -75,7 +75,7 @@ The bolts in question were comically long. I suppose if you wanted to mount this
 
 ![Install 3]({{ "/assets/images/popup/install_3.webp" | relative_url }})
 
-With the bolts removed, and a little bit of convincing the stuck adhesive that it was time to let go, the AC was able to get removed. Now we have a 14"x14" in the roof of the popup that needs to be filled ASAP.
+With the bolts removed, and a little bit of convincing the stuck adhesive that it was time to let go, the AC was able to get removed. Now we have a 14"x14" hole in the roof of the popup that needs to be filled ASAP.
 
 ![Install 4]({{ "/assets/images/popup/install_4.webp" | relative_url }})
 
@@ -93,7 +93,7 @@ Next was a generous application of butyl tape to the perimeter of the fan. I wan
 
 ![Install 7]({{ "/assets/images/popup/install_7.webp" | relative_url }})
 
-After seating the fan opening in the hole and screwing it down I trimmed off the excess flashing. I tried removing any excess silicone and foam from the ac that was left behind but I had concerns with damaging the roof and ended up leaving a good amount of it behind. 
+After seating the fan opening in the hole and screwing it down I trimmed off the excess flashing. I tried removing any excess silicone and foam from the AC that was left behind but I had concerns with damaging the roof and ended up leaving a good amount of it behind. 
 
 ![Install 8]({{ "/assets/images/popup/install_8.webp" | relative_url }})
 
@@ -129,7 +129,13 @@ Final install video. Both directions move plenty of air and can cool the popup p
 {% include video.html file="/assets/video/popup/install_15.mp4" %}
 
 Bonus is that now when towing I can see behind the popup, where previously my entire rear view was obscured by the AC unit.
+
 ![Rear view]({{ "/assets/images/popup/rearview.webp" | relative_url }})
+
+Here's to more camping with a more efficient popup!
+
+![Coffee in a percolator]({{ "/assets/images/popup/coffee.webp" | relative_url }})
+
 
 
 
