@@ -2,7 +2,9 @@
 layout: post
 title:  "Camera Upgrades and DeGoogling Or: How I Learned to stop worrying and love Reolink"
 date:   2026-06-15
-categories: tech
+tags:
+  - tech
+description: "Replacing Google Nest cameras with Reolink for fully local video storage, no subscription, and self-hosted Frigate for AI detection."
 ---
 
 Our gen 1 Google Nest video doorbell was starting to have issues after years of being outside subject to the weather. It had a good run but when looking for a replacement I was more conscientious about where the footage around my home was being stored and what companies had access to it. Historically I've been very pro Google, but with my recent homelab build, and companies updating their TOS to allow them to train models on your personal data I wanted to see if I could keep this data as local as possible. 
@@ -34,4 +36,4 @@ Installation once again was as simple as any wired device, and I had it up and r
 Now with those two devices I'm off Google cameras and can cancel my Nest Aware subscription. Saving me $7/mo but more importantly giving me more confidence about what the video footage of my community is being used for.
 
 Side note my daughter thinks the new camera looks like a little robot which is a plus
-![Driveway Camera]({{ "/assets/images/cameras/driveway_cam.jpg" | relative_url }})
+![Driveway Camera]({{ "/assets/images/cameras/driveway_cam.webp" | relative_url }})

@@ -1,9 +1,18 @@
 ---
 layout: post
-title:  "<title>>"
-date:   <2014-10-26>
-categories: <first_post>
+title:  "Post Title"
+date:   2014-10-26
+tags:
+  - tag
+description: ""
 ---
 
 # Link to an image
-![Driveway Camera]({{ "/assets/images/cameras/driveway_cam.jpg" | relative_url }})
+![Desc]({{ "/assets/images/cameras/image.jpg" | relative_url }})
+
+```mermaid
+graph TD;
+A-->B
+A-->C
+B-->C
+```

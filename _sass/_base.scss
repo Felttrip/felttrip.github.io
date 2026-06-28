@@ -1,6 +1,5 @@
-/**
- * Reset some basic elements
- */
+@use "variables" as vars;
+
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -8,63 +7,37 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-
-/**
- * Basic styling
- */
 body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
+    font-family: vars.$base-font-family;
+    font-size: vars.$base-font-size;
+    line-height: vars.$base-line-height;
     font-weight: 300;
-    color: $text-color;
-    background-color: $background-color;
+    color: vars.$text-color;
+    background-color: vars.$background-color;
     -webkit-text-size-adjust: 100%;
 }
 
-
-
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+ul, ol, dl, figure {
+    margin-bottom: calc(vars.$spacing-unit / 2);
 }
 
-
-
-/**
- * Images
- */
 img {
     max-width: 100%;
     vertical-align: middle;
 }
 
-
-
-/**
- * Figures
- */
 figure > img {
     display: block;
 }
 
 figcaption {
-    font-size: $small-font-size;
+    font-size: vars.$small-font-size;
 }
 
-
-
-/**
- * Lists
- */
 ul, ol {
-    margin-left: $spacing-unit;
+    margin-left: vars.$spacing-unit;
 }
 
 li {
@@ -74,37 +47,22 @@ li {
     }
 }
 
-
-
-/**
- * Headings
- */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
 
-
-
-/**
- * Links
- */
 a {
-    color: $text-color;
+    color: vars.$text-color;
     text-decoration: none;
     &:hover {
-        color: $brand-color;
+        color: vars.$brand-color;
     }
 }
 
-
-
-/**
- * Blockquotes
- */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
+    color: vars.$grey-color;
+    border-left: 4px solid vars.$grey-color-light;
+    padding-left: calc(vars.$spacing-unit / 2);
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
@@ -114,15 +72,10 @@ blockquote {
     }
 }
 
-
-
-/**
- * Code formatting
- */
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid vars.$grey-color-light;
     border-radius: 3px;
     background-color: #eef;
 }
@@ -142,35 +95,7 @@ pre {
     }
 }
 
-
-
-/**
- * Wrapper
- */
-.wrapper {
-    max-width: -webkit-calc(800px - (#{$spacing-unit} * 2));
-    max-width:         calc(800px - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
-
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(800px - (#{$spacing-unit}));
-        max-width:         calc(800px - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
-}
-
-
-
-/**
- * Clearfix
- */
 %clearfix {
-
     &:after {
         content: "";
         display: table;
@@ -178,13 +103,30 @@ pre {
     }
 }
 
+%vertical-rhythm {
+    margin-bottom: calc(vars.$spacing-unit / 2);
+}
 
+.wrapper {
+    max-width: calc(800px - (#{vars.$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: vars.$spacing-unit;
+    padding-left: vars.$spacing-unit;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 
-/**
- * Icons
- */
+    @include vars.media-query(vars.$on-laptop) {
+        max-width: calc(800px - #{vars.$spacing-unit});
+        padding-right: calc(vars.$spacing-unit / 2);
+        padding-left: calc(vars.$spacing-unit / 2);
+    }
+}
+
 .icon {
-
     > svg {
         display: inline-block;
         width: 16px;
@@ -192,7 +134,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: vars.$grey-color;
         }
     }
 }

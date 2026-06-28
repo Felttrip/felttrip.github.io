@@ -1,0 +1,1 @@
+General setup of frigate with new reolink cameras

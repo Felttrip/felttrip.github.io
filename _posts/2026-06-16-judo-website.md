@@ -2,9 +2,10 @@
 layout: post
 title:  "Judo Testing Prep Website"
 date:   2026-06-16
-categories: 
+tags: 
   - tech
   - judo
+description: "Building a static web app to help Colorado judoka prep for dan rank testing — with rank filtering, technique overviews, and a random practice mode."
 ---
 
 I've got a couple of friends who are getting ready to test for their Yodan rank in Judo. This is a fourth degree black belt and a pretty big deal IMO. For each higher rank you test for you can be asked about any of the prior content for each rank, so by the time you get you Yodan it can be quite a lot of techniques. 
@@ -25,24 +26,24 @@ In addition to making the information generally easier to study by grouping it i
 ## Filtering
 The first step in making this information more consumable was the ability to filter down to just the rank you were testing for.
 
-![Screen shot of the ability to select ranks for judo.felttrip.com]({{ "/assets/images/judo_website/rank_selector.png" | relative_url }})
+![Screen shot of the ability to select ranks for judo.felttrip.com]({{ "/assets/images/judo_website/rank_selector.webp" | relative_url }})
 
 Adding this makes it so that you can ensure you are focusing on just the techniques that matter.
 
 ## Overview
 Next is the overview with new techniques section. I thought being able to see a quick overview of what you had not been tested on would give a good idea of what you needed to focus on. 
 
-![Screen shot of the ability to see new techniques on judo.felttrip.com]({{ "/assets/images/judo_website/new_tech.png" | relative_url }})
+![Screen shot of the ability to see new techniques on judo.felttrip.com]({{ "/assets/images/judo_website/new_tech.webp" | relative_url }})
 
 ## All Required Techniques
 Judo is divided into two main categories of techniques. Nage-waza, throwing techniques, and katame-waza, ground techniques. To ensure that you know all of the prior techniques going to each of these tabs has listed out everything you are expected to know for that rank, including all prior ranks.
 
-![Screen shot of the nage-waza tab selected on judo.felttrip.com]({{ "/assets/images/judo_website/nage_waza.png" | relative_url }})
+![Screen shot of the nage-waza tab selected on judo.felttrip.com]({{ "/assets/images/judo_website/nage_waza.webp" | relative_url }})
 
 ## Practice
 The final important feature in my opinion is the Practice tab. This tab allows you to get a random technique (non repeated) to demonstrate, which is similar to how the actual rank testing would occur. I found during preparing for testing that having it be truly random is much better than having someone try to "randomly" pick one off of a list.
 
-![Screen shot of the practice page on judo.felttrip.com]({{ "/assets/images/judo_website/practice.png" | relative_url }})
+![Screen shot of the practice page on judo.felttrip.com]({{ "/assets/images/judo_website/practice.webp" | relative_url }})
 
 # Technical Considerations
 There were a few minor technical constraints that needed to be met for this webapp to make sense. 

@@ -40,10 +40,15 @@ layout: post
 title: "Your Post Title"
 date: YYYY-MM-DD
 categories: category-name
+description: "Optional short description for SEO and social sharing (160 chars max)"
+image: /assets/images/your-post/cover.webp
 ---
 
 Post content here...
 ```
+
+- `description` — used for meta description, Open Graph, and Twitter Card. Falls back to the post excerpt if omitted.
+- `image` — used for `og:image` and `twitter:image` social previews. Optional.
 
 ## Drafts
 
@@ -54,6 +59,20 @@ _drafts/my-draft-post.md
 ```
 
 Drafts appear locally when running `make serve` but are not published.
+
+## Mermaid diagrams
+
+Posts support [Mermaid](https://mermaid.js.org/) diagrams using fenced code blocks:
+
+````markdown
+```mermaid
+graph TD;
+    A-->B;
+    B-->C;
+```
+````
+
+Mermaid is loaded automatically on any page that contains a mermaid code block. No additional front matter or configuration is needed.
 
 ## Deploying
 
