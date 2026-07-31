@@ -30,7 +30,7 @@
     {{ end }}
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    {{ with resources.Get "scss/main.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+    {{ with resources.Get "scss/main.scss" | css.Sass (dict "transpiler" "dartsass") | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
     {{ end }}
     <link rel="canonical" href="{{ .Permalink }}">
