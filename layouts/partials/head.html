@@ -1,0 +1,48 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{ if .Title }}{{ .Title }} | {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+
+    {{- $description := "" }}
+    {{- if .Params.description }}{{ $description = .Params.description }}
+    {{- else if .IsPage }}{{ $description = .Summary | plainify | truncate 160 }}
+    {{- else }}{{ $description = .Site.Params.description }}{{ end }}
+    <meta name="description" content="{{ $description }}">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="{{ if eq .Type "posts" }}article{{ else }}website{{ end }}">
+    <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    <meta property="og:description" content="{{ $description }}">
+    {{ if .Params.image }}
+    <meta property="og:image" content="{{ .Params.image | absURL }}">
+    {{ end }}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+    <meta name="twitter:description" content="{{ $description }}">
+    {{ if .Params.image }}
+    <meta name="twitter:image" content="{{ .Params.image | absURL }}">
+    {{ end }}
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    {{ with resources.Get "scss/main.scss" | css.Sass (dict "transpiler" "dartsass") | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+    {{ end }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="shortcut icon" href="/css/icon.png" />
+    {{ range .AlternativeOutputFormats }}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ $.Site.Title }}">
+    {{ end }}
+</head>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+  await mermaid.run({
+    querySelector: '.language-mermaid',
+  });
+</script>

@@ -1,0 +1,250 @@
+@use "variables" as vars;
+
+.site-header {
+    border-top: 5px solid vars.$grey-color-dark;
+    border-bottom: 1px solid vars.$grey-color-light;
+    min-height: 56px;
+    position: relative;
+}
+
+.site-title {
+    font-size: 26px;
+    line-height: 56px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    float: left;
+
+    &,
+    &:visited {
+        color: vars.$grey-color-dark;
+    }
+}
+
+.site-nav {
+    float: right;
+    line-height: 56px;
+
+    .menu-icon {
+        display: none;
+    }
+
+    .page-link {
+        color: vars.$text-color;
+        line-height: vars.$base-line-height;
+
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+
+    @include vars.media-query(vars.$on-palm) {
+        position: absolute;
+        top: 9px;
+        right: 30px;
+        background-color: vars.$background-color;
+        border: 1px solid vars.$grey-color-light;
+        border-radius: 5px;
+        text-align: right;
+
+        .menu-icon {
+            display: block;
+            float: right;
+            width: 36px;
+            height: 26px;
+            line-height: 0;
+            padding-top: 10px;
+            text-align: center;
+
+            > svg {
+                width: 18px;
+                height: 15px;
+
+                path {
+                    fill: vars.$grey-color-dark;
+                }
+            }
+        }
+
+        .trigger {
+            clear: both;
+            display: none;
+        }
+
+        &:hover .trigger {
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        .page-link {
+            display: block;
+            padding: 5px 10px;
+        }
+    }
+}
+
+.site-footer {
+    border-top: 1px solid vars.$grey-color-light;
+    padding: vars.$spacing-unit 0;
+}
+
+.footer-heading {
+    font-size: 18px;
+    margin-bottom: calc(vars.$spacing-unit / 2);
+}
+
+.contact-list,
+.social-media-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.footer-col-wrapper {
+    font-size: 15px;
+    color: vars.$grey-color;
+    margin-left: calc(-1 * vars.$spacing-unit / 2);
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.footer-col {
+    float: left;
+    margin-bottom: calc(vars.$spacing-unit / 2);
+    padding-left: calc(vars.$spacing-unit / 2);
+}
+
+.footer-col-1 {
+    width: calc(35% - (#{vars.$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+    width: calc(20% - (#{vars.$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+    width: calc(45% - (#{vars.$spacing-unit} / 2));
+}
+
+@include vars.media-query(vars.$on-laptop) {
+    .footer-col-1,
+    .footer-col-2 {
+        width: calc(50% - (#{vars.$spacing-unit} / 2));
+    }
+
+    .footer-col-3 {
+        width: calc(100% - (#{vars.$spacing-unit} / 2));
+    }
+}
+
+@include vars.media-query(vars.$on-palm) {
+    .footer-col {
+        float: none;
+        width: calc(100% - (#{vars.$spacing-unit} / 2));
+    }
+}
+
+.page-content {
+    padding: vars.$spacing-unit 0;
+}
+
+.page-heading {
+    font-size: 20px;
+}
+
+.post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: vars.$spacing-unit;
+    }
+}
+
+.post-meta {
+    font-size: vars.$small-font-size;
+    color: vars.$grey-color;
+}
+
+.post-link {
+    display: block;
+    font-size: 24px;
+}
+
+.post-header {
+    margin-bottom: vars.$spacing-unit;
+}
+
+.post-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    @include vars.media-query(vars.$on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-content {
+    margin-bottom: vars.$spacing-unit;
+
+    h1 {
+        font-size: 38px;
+
+        @include vars.media-query(vars.$on-laptop) {
+            font-size: 32px;
+        }
+    }
+
+    h2 {
+        font-size: 32px;
+
+        @include vars.media-query(vars.$on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include vars.media-query(vars.$on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include vars.media-query(vars.$on-laptop) {
+            font-size: 18px;
+        }
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+.page-content {
+    a {
+        text-decoration: underline;
+    }
+}
+
+.post-tag {
+    font-size: vars.$small-font-size;
+    color: vars.$grey-color;
+    &:hover {
+        color: vars.$brand-color;
+    }
+}
+
+a.tag-rss {
+    color: vars.$grey-color;
+    text-decoration: none;
+    font-size: vars.$small-font-size;
+    &:hover {
+        color: vars.$brand-color;
+    }
+}

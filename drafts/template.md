@@ -1,0 +1,17 @@
+---
+title:  "Post Title"
+date:   2014-10-26
+tags:
+  - tag
+description: ""
+---
+
+# Link to an image
+![Desc](/assets/images/cameras/image.jpg)
+
+```mermaid
+graph TD;
+A-->B
+A-->C
+B-->C
+```

@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="page">
+  <header class="page-header">
+    <h1 class="page-title">Tags</h1>
+  </header>
+
+  <article class="page-content">
+    {{ range $name, $weightedPages := .Site.Taxonomies.tags }}
+      {{ $termPage := $.Site.GetPage (printf "/tags/%s" ($name | urlize)) }}
+      <h2 id="{{ $name | urlize }}">
+        {{ $name }}
+        {{ with $termPage }}{{ with .OutputFormats.Get "rss" }}
+        <a class="tag-rss" href="{{ .Permalink }}" title="RSS feed for {{ $name }}">
+          <i class="fa fa-rss-square"></i>
+        </a>
+        {{ end }}{{ end }}
+      </h2>
+      <ul class="post-list">
+        {{ range $weightedPages.Pages.ByDate.Reverse }}
+          <li>
+            <span class="post-meta">{{ .Date.Format "Jan 2, 2006" }}</span>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </article>
+</div>
+{{ end }}

@@ -1,0 +1,41 @@
+baseURL = "https://blog.felttrip.com"
+locale = "en-us"
+title = "A Day In The Woods"
+copyright = "Nate Thompson"
+
+[outputFormats.RSS]
+  mediaType = "application/rss+xml"
+  baseName = "feed"
+  isPlainText = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[params]
+  description = "Nate Thompson's blog on a variety of topics."
+  email = "nthompson55@gmail.com"
+  author = "by Nate Thompson"
+  bitcoin = "3HzpgZukKCjpJxkYyETzFFWFPjW52neqYZ"
+  linkedin_username = "thompsonnathaniel"
+  github_username = "felttrip"
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    name = "Webring"
+    url = "/webring/"
+    weight = 20
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 30
+
+[taxonomies]
+  tag = "tags"
+
+[markup.goldmark.renderer]
+  unsafe = true
