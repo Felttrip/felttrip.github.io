@@ -1,16 +1,14 @@
 # felttrip.github.io
 
-Source for [blog.felttrip.com](https://blog.felttrip.com) — a Jekyll site hosted on GitHub Pages.
+Source for [blog.felttrip.com](https://blog.felttrip.com) — a Hugo site hosted on GitHub Pages.
 
 ## Prerequisites
 
-- Ruby (check `.ruby-version` or use a version manager like `rbenv`)
-- Bundler: `gem install bundler`
-
-## Setup
+- [Hugo](https://gohugo.io/installation/) (extended edition — the site uses the SCSS asset pipeline)
+- [Dart Sass](https://sass-lang.com/dart-sass/) — required by Hugo to compile SCSS
 
 ```bash
-bundle install
+brew install hugo dart-sass
 ```
 
 ## Local development
@@ -19,27 +17,27 @@ bundle install
 make serve
 ```
 
-This runs `bundle exec jekyll serve --baseurl="" --livereload --drafts`, which:
-- Serves the site at [http://localhost:4000](http://localhost:4000)
+This runs `hugo server --buildDrafts`, which:
+- Serves the site at [http://localhost:1313](http://localhost:1313)
 - Reloads the browser on file changes
-- Includes draft posts (files in `_drafts/`)
+- Includes any content marked `draft: true`
 
 ## Writing posts
 
-Posts live in `_posts/` and follow the naming convention:
+Posts live in `content/posts/` and follow the naming convention:
 
 ```
-_posts/YYYY-MM-DD-post-title.md
+content/posts/YYYY-MM-DD-post-title.md
 ```
 
 Each post needs front matter at the top:
 
 ```yaml
 ---
-layout: post
 title: "Your Post Title"
 date: YYYY-MM-DD
-categories: category-name
+tags:
+  - tag-name
 description: "Optional short description for SEO and social sharing (160 chars max)"
 image: /assets/images/your-post/cover.webp
 ---
@@ -47,18 +45,16 @@ image: /assets/images/your-post/cover.webp
 Post content here...
 ```
 
-- `description` — used for meta description, Open Graph, and Twitter Card. Falls back to the post excerpt if omitted.
+- `description` — used for meta description, Open Graph, and Twitter Card. Falls back to the post summary if omitted.
 - `image` — used for `og:image` and `twitter:image` social previews. Optional.
+
+Post permalinks are pinned via an explicit `url:` front matter field (e.g. `url: "/2026/07/25/sauna-framing.html"`) to preserve the original Jekyll URL scheme. Set this on any new post as `/:year/:month/:day/:slug.html`.
 
 ## Drafts
 
-Save unfinished posts to `_drafts/` without a date in the filename:
+Unfinished notes live in `drafts/` at the repo root (outside `content/`, so Hugo never builds them) — same idea as Jekyll's `_drafts/`.
 
-```
-_drafts/my-draft-post.md
-```
-
-Drafts appear locally when running `make serve` but are not published.
+Alternatively, a post can live in `content/posts/` with `draft: true` in its front matter; it will show up locally with `make serve` but is excluded from `make build` / production builds.
 
 ## Mermaid diagrams
 
@@ -72,21 +68,20 @@ graph TD;
 ```
 ````
 
-Mermaid is loaded automatically on any page that contains a mermaid code block. No additional front matter or configuration is needed.
+Mermaid is loaded automatically on every page. No additional front matter or configuration is needed.
 
 ## Deploying
 
-Push to the `master` branch. GitHub Pages builds and deploys automatically.
+Push to the `master` branch. GitHub Pages builds and deploys automatically via `.github/workflows/hugo.yml`.
 
 ## Project structure
 
 ```
-_config.yml       # Site settings (title, URL, etc.)
-_posts/           # Published posts
-_drafts/          # Unpublished drafts
-_layouts/         # Page templates
-_includes/        # Reusable HTML fragments
-_sass/            # Stylesheets
-assets/           # Images and other static files
-pages/            # Static pages (about, etc.)
+hugo.toml         # Site settings (title, URL, taxonomies, etc.)
+content/posts/    # Published posts
+content/*.md      # Static pages (about, webring)
+drafts/           # Unpublished draft notes (not built by Hugo)
+layouts/          # Page templates and partials
+assets/scss/      # Stylesheets (compiled via Hugo's asset pipeline)
+static/           # Images, video, and other files served as-is
 ```

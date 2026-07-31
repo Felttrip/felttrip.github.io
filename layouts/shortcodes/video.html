@@ -1,0 +1,4 @@
+<video controls width="{{ .Get "width" | default "100%" }}" preload="metadata">
+  <source src="{{ .Get "file" | relURL }}" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
