@@ -239,3 +239,12 @@
         color: vars.$brand-color;
     }
 }
+
+a.tag-rss {
+    color: vars.$grey-color;
+    text-decoration: none;
+    font-size: vars.$small-font-size;
+    &:hover {
+        color: vars.$brand-color;
+    }
+}
