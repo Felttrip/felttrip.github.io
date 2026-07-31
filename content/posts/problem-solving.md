@@ -4,7 +4,6 @@ date:   2014-11-03
 tags:
   - algorithms
 description: "How reframing a graph problem — finding a minimum spanning tree in O(V) time — led to a lesson about problem solving versus rote algorithm knowledge."
-url: "/2014/11/03/problem-solving.html"
 ---
 
 One of my friends approached me with an algorithm problem the other day. Here's

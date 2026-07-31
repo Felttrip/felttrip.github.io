@@ -5,7 +5,6 @@ tags:
   - tech
   - judo
 description: "Building a static web app to help Colorado judoka prep for dan rank testing — with rank filtering, technique overviews, and a random practice mode."
-url: "/2026/06/16/judo-website.html"
 ---
 
 I've got a couple of friends who are getting ready to test for their Yodan rank in Judo. This is a fourth degree black belt and a pretty big deal IMO. For each higher rank you test for you can be asked about any of the prior content for each rank, so by the time you get you Yodan it can be quite a lot of techniques. 

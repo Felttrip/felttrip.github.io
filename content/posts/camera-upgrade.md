@@ -4,7 +4,6 @@ date:   2026-06-15
 tags:
   - tech
 description: "Replacing Google Nest cameras with Reolink for fully local video storage, no subscription, and self-hosted Frigate for AI detection."
-url: "/2026/06/15/camera-upgrade.html"
 ---
 
 Our gen 1 Google Nest video doorbell was starting to have issues after years of being outside subject to the weather. It had a good run but when looking for a replacement I was more conscientious about where the footage around my home was being stored and what companies had access to it. Historically I've been very pro Google, but with my recent homelab build, and companies updating their TOS to allow them to train models on your personal data I wanted to see if I could keep this data as local as possible. 

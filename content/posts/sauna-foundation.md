@@ -4,7 +4,6 @@ date:   2026-07-24
 tags:
   - sauna
 description: "Building a pier foundation for the sauna."
-url: "/2026/07/24/sauna-foundation.html"
 ---
 Finally a post for the sauna build! At the time of writing this, I'm working on putting up the tongue and groove board for the interior of the hot room, but I'm going to make these posts in rough chronological order, so we're going to start with the foundation.
 

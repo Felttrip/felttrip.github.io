@@ -4,7 +4,6 @@ date:   2026-07-25
 tags:
   - sauna
 description: "Framing (and a bit more) for the sauna."
-url: "/2026/07/25/sauna-framing.html"
 ---
 Next on the Sauna Build series is framing! The plans for this build are based on these [8x12 Shed Plans](https://www.etsy.com/listing/1886131265/8x12-shed-plans-build-guide-diy) I got from a seller on Etsy. I ended up making some minor modifications, like moving one window to another wall, and using a pre-hung exterior door, but all in all these plans got me 85% of the way to what I needed and were a great foundation to apply modifications to. 
 

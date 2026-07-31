@@ -4,7 +4,6 @@ date:   2025-09-14
 tags:
   - camping
 description: "Building a lighter, better organized camp kitchen chuck box using a skin-on-bones plywood construction and plastic bus bins as a drawer system."
-url: "/2025/09/14/chuck-box-prototype.html"
 ---
 
 For car camping I've had several variations on how to organize and store the camp kitchen. For the past several years I've been using a not so well constructed version of the [REI Camp Kitchen Chuck Box](https://www.rei.com/blog/wp-content/uploads/sites/4/2015/07/Blog-Camp-Kitchen-Cut-Sheet.pdf). 

@@ -24,13 +24,13 @@ This runs `hugo server --buildDrafts`, which:
 
 ## Writing posts
 
-Posts live in `content/posts/` and follow the naming convention:
+Posts live in `content/posts/`, named after the post's slug (no date prefix — the date lives in front matter):
 
 ```
-content/posts/YYYY-MM-DD-post-title.md
+content/posts/post-title.md
 ```
 
-Each post needs front matter at the top:
+This becomes `/posts/post-title/`. Each post needs front matter at the top:
 
 ```yaml
 ---
@@ -47,8 +47,6 @@ Post content here...
 
 - `description` — used for meta description, Open Graph, and Twitter Card. Falls back to the post summary if omitted.
 - `image` — used for `og:image` and `twitter:image` social previews. Optional.
-
-Post permalinks are pinned via an explicit `url:` front matter field (e.g. `url: "/2026/07/25/sauna-framing.html"`) to preserve the original Jekyll URL scheme. Set this on any new post as `/:year/:month/:day/:slug.html`.
 
 ## Drafts
 

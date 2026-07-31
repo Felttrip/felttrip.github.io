@@ -5,7 +5,6 @@ tags:
     - popup
     - camping
 description: "Replacing a roof-mounted AC unit on a popup camper with a DC-powered roof vent fan so it can run off battery while dispersed camping."
-url: "/2026/06/28/popup-ac-conversion.html"
 ---
 Last year we got a popup camper. It's been great for car camping with a kid, it's easy to tow, and still feels like you're camping because it's still tent adjacent. 
 

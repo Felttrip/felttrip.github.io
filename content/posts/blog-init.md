@@ -4,7 +4,6 @@ date:   2014-10-26
 tags:
   - first_post
 description: "First post — an introduction to what this blog will cover including programming, backpacking, hardware, and more."
-url: "/2014/10/26/blog-init.html"
 ---
 
 `$ blog init`
