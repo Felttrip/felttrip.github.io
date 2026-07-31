@@ -6,7 +6,7 @@ copyright = "Nate Thompson"
 [outputFormats.RSS]
   mediaType = "application/rss+xml"
   baseName = "feed"
-  isPlainText = false
+  isPlainText = true
 
 [outputs]
   home = ["HTML", "RSS"]
