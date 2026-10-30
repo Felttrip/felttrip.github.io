@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Camera Upgrades and DeGoogling Or: How I Learned to stop worrying and love Reolink | A Day In The Woods</title>
+
+    
+    <meta name="description" content="Replacing Google Nest cameras with Reolink for fully local video storage, no subscription, and self-hosted Frigate for AI detection.">
+    
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Camera Upgrades and DeGoogling Or: How I Learned to stop worrying and love Reolink">
+    <meta property="og:url" content="http://localhost:4000/2026/06/15/camera-upgrade.html">
+    <meta property="og:site_name" content="A Day In The Woods">
+    
+    <meta property="og:description" content="Replacing Google Nest cameras with Reolink for fully local video storage, no subscription, and self-hosted Frigate for AI detection.">
+    
+    
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Camera Upgrades and DeGoogling Or: How I Learned to stop worrying and love Reolink">
+    
+    <meta name="twitter:description" content="Replacing Google Nest cameras with Reolink for fully local video storage, no subscription, and self-hosted Frigate for AI detection.">
+    
+    
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/2026/06/15/camera-upgrade.html">
+    <link rel="shortcut icon" href="/css/icon.png" />
+</head>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+  await mermaid.run({
+    querySelector: '.language-mermaid',
+  });
+</script>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">A Day In The Woods</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/tags/">Tags</a>
+          
+        
+          
+          <a class="page-link" href="/webring/">Webring</a>
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Camera Upgrades and DeGoogling Or: How I Learned to stop worrying and love Reolink</h1>
+    <p class="post-meta">Jun 15, 2026</p>
+  </header>
+
+  <article class="post-content">
+    <p>Our gen 1 Google Nest video doorbell was starting to have issues after years of being outside subject to the weather. It had a good run but when looking for a replacement I was more conscientious about where the footage around my home was being stored and what companies had access to it. Historically I’ve been very pro Google, but with my recent homelab build, and companies updating their TOS to allow them to train models on your personal data I wanted to see if I could keep this data as local as possible.</p>
+
+<p>After doing some research I took the plunge on a <a href="https://reolink.com/us/product/reolink-video-doorbell-wifi/">Reolink doorbell</a>. Some of the constraints I had were that,</p>
+
+<ul>
+  <li>It needed to be able to be powered by a door bell transformer.</li>
+  <li>WiFi Connectivity</li>
+  <li>Ability to store the footage on my home server</li>
+  <li>No Subscription</li>
+  <li>In Stock</li>
+</ul>
+
+<p>As much as I wanted to run PoE to my front door and go all in on a UniFi security system. I didn’t need a big new project in addition to the sauna build (look for that in the next blog post). And the wireless versions were never in stock or way too expensive on the used market.</p>
+
+<p>This Cam seemed to check all the boxes with the plan that if it worked well I would replace our Google Nest driveway security light camera setup with their version of that product.</p>
+
+<p>I bought it and the install was as simple as installing any doorbell camera.</p>
+
+<p>A cool feature with these cameras is that you just stick a microSD card in them and it records all of the footage locally. Once full it just erases the oldest footage. In addition to that all of the entity recognition (cars, people, pets) lives totally locally on the device. That combined with their app and these became basically totally self supported cameras with no need for a subscription of any kind.</p>
+
+<p>An entire other blog post could be devoted to getting <a href="https://frigate.video/">Frigate</a> setup, but for the purposes of this one, I was able to get that self hosted on my server and have it store all the footage from my doorbell camera on it, allowing me to configure the doorbell camera to only record when it detects people. This configuration lets me minimize writes to the local SD card while still having the ability to review footage should there be an incident that didn’t trigger the cameras local recording.</p>
+
+<p>After a few weeks of using the doorbell camera I was pretty happy with how it was performing and decided to grab the security light camera. Similar constraints to the doorbell camera, I wanted wifi and it needed to be able to be hardwired to the circuit I had run for the old Google camera.</p>
+
+<p>There was some sort of Reolinnk site wide deal going on and was able to pickup a <a href="https://reolink.com/us/product/reolink-duo-floodlight-wifi/">Duo Floodlight WiFi</a> at a discount.</p>
+
+<p>Installation once again was as simple as any wired device, and I had it up and running in 30 minutes. It did require some configuration for when the security light would come on. Initially it kept detecting my parked car and counting that as seeing a vehicle and turning the light on which was a tad aggressive. Configuring it to only turn on the light when it detected a person seems to be working well.</p>
+
+<p>Now with those two devices I’m off Google cameras and can cancel my Nest Aware subscription. Saving me $7/mo but more importantly giving me more confidence about what the video footage of my community is being used for.</p>
+
+<p>Side note my daughter thinks the new camera looks like a little robot which is a plus
+<img src="/assets/images/cameras/driveway_cam.webp" alt="Driveway Camera" /></p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>A Day In The Woods</li>
+          <li><a href="mailto:nthompson55@gmail.com">nthompson55@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+            <a href="https://github.com/felttrip">
+                <i class="fa fa-github-square fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/thompsonnathaniel">
+                <i class="fa fa-linkedin-square fa-2x"></i>
+            </a>
+            <a href="/feed.xml">
+                <i class="fa fa-rss-square fa-2x"></i>
+            </a>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">
+            Nate Thompson's blog on a variety of topics.
+<br>
+            <i class="fa fa-btc"></i><a href="bitcoin:3HzpgZukKCjpJxkYyETzFFWFPjW52neqYZ?label=A%20Day%20In%20The%20Woods">3HzpgZukKCjpJxkYyETzFFWFPjW52neqYZ</a>
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <script>
+      document.querySelectorAll('img').forEach(img => img.loading = 'lazy');
+    </script>
+
+  </body>
+
+</html>

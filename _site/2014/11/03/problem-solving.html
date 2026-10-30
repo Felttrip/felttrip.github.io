@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Problem Solving | A Day In The Woods</title>
+
+    
+    <meta name="description" content="How reframing a graph problem — finding a minimum spanning tree in O(V) time — led to a lesson about problem solving versus rote algorithm knowledge.">
+    
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Problem Solving">
+    <meta property="og:url" content="http://localhost:4000/2014/11/03/problem-solving.html">
+    <meta property="og:site_name" content="A Day In The Woods">
+    
+    <meta property="og:description" content="How reframing a graph problem — finding a minimum spanning tree in O(V) time — led to a lesson about problem solving versus rote algorithm knowledge.">
+    
+    
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Problem Solving">
+    
+    <meta name="twitter:description" content="How reframing a graph problem — finding a minimum spanning tree in O(V) time — led to a lesson about problem solving versus rote algorithm knowledge.">
+    
+    
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/2014/11/03/problem-solving.html">
+    <link rel="shortcut icon" href="/css/icon.png" />
+</head>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+  await mermaid.run({
+    querySelector: '.language-mermaid',
+  });
+</script>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">A Day In The Woods</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/tags/">Tags</a>
+          
+        
+          
+          <a class="page-link" href="/webring/">Webring</a>
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Problem Solving</h1>
+    <p class="post-meta">Nov 3, 2014</p>
+  </header>
+
+  <article class="post-content">
+    <p>One of my friends approached me with an algorithm problem the other day. Here’s
+the short version of it.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Given an undirected weighted graph where E=V find the minimum spaning tree in O(V) time.
+E = Number of edges.
+V = Number of vertices.
+</code></pre></div></div>
+
+<p>Now my friend had tried a few different things relating to finding an MST.
+Prim’s and Kruskal’s algorithms were brought up, but both couldn’t be modified
+such that they would solve the problem in O(V) time.</p>
+
+<p>The problem we were having was that we couldn’t see the forest through the
+trees. The solution wasn’t that we needed to find an MST in O(V) time, but that
+we needed to find the heaviest weighted edge that created a cycle in O(V) time.</p>
+
+<p>By eliminating the heaviest edge that created a cycle we would have the Minimum
+Spaning Tree because all we would have left was a tree. This could easily be done
+using a modified Depth First Search.</p>
+
+<p>I thought that this story was a prime example of the difference between problem
+solving and knowledge. Knowing lists and lists of algorithms can help you solve
+lots of problems, but sometimes a problem can present itself that doesn’t fit into
+a predefined schema. When that happens, problem solving is what will be what can
+take your knowledge and bend and mold it into your solution.</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>A Day In The Woods</li>
+          <li><a href="mailto:nthompson55@gmail.com">nthompson55@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+            <a href="https://github.com/felttrip">
+                <i class="fa fa-github-square fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/thompsonnathaniel">
+                <i class="fa fa-linkedin-square fa-2x"></i>
+            </a>
+            <a href="/feed.xml">
+                <i class="fa fa-rss-square fa-2x"></i>
+            </a>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">
+            Nate Thompson's blog on a variety of topics.
+<br>
+            <i class="fa fa-btc"></i><a href="bitcoin:3HzpgZukKCjpJxkYyETzFFWFPjW52neqYZ?label=A%20Day%20In%20The%20Woods">3HzpgZukKCjpJxkYyETzFFWFPjW52neqYZ</a>
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <script>
+      document.querySelectorAll('img').forEach(img => img.loading = 'lazy');
+    </script>
+
+  </body>
+
+</html>

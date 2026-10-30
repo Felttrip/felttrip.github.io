@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A Day In The Woods</title>
+    <description>Nate Thompson&apos;s blog on a variety of topics.
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 28 Jun 2026 12:58:33 -0600</pubDate>
+    <lastBuildDate>Sun, 28 Jun 2026 12:58:33 -0600</lastBuildDate>
+    <generator>Jekyll v4.4.1</generator>
+    
+      <item>
+        <title>Popup AC Conversion</title>
+        <description>Replacing a roof-mounted AC unit on a popup camper with a DC-powered roof vent fan so it can run off battery while dispersed camping.</description>
+        <pubDate>Sun, 28 Jun 2026 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/2026/06/28/popup-ac-conversion.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2026/06/28/popup-ac-conversion.html</guid>
+        
+        <category>popup</category>
+        
+        <category>camping</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Judo Testing Prep Website</title>
+        <description>Building a static web app to help Colorado judoka prep for dan rank testing — with rank filtering, technique overviews, and a random practice mode.</description>
+        <pubDate>Tue, 16 Jun 2026 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/2026/06/16/judo-website.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2026/06/16/judo-website.html</guid>
+        
+        <category>tech</category>
+        
+        <category>judo</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Camera Upgrades and DeGoogling Or: How I Learned to stop worrying and love Reolink</title>
+        <description>Replacing Google Nest cameras with Reolink for fully local video storage, no subscription, and self-hosted Frigate for AI detection.</description>
+        <pubDate>Mon, 15 Jun 2026 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/2026/06/15/camera-upgrade.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2026/06/15/camera-upgrade.html</guid>
+        
+        <category>tech</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Chuck Box Prototype</title>
+        <description>Building a lighter, better organized camp kitchen chuck box using a skin-on-bones plywood construction and plastic bus bins as a drawer system.</description>
+        <pubDate>Sun, 14 Sep 2025 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/2025/09/14/chuck-box-prototype.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/09/14/chuck-box-prototype.html</guid>
+        
+        <category>camping</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Problem Solving</title>
+        <description>How reframing a graph problem — finding a minimum spanning tree in O(V) time — led to a lesson about problem solving versus rote algorithm knowledge.</description>
+        <pubDate>Mon, 03 Nov 2014 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2014/11/03/problem-solving.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2014/11/03/problem-solving.html</guid>
+        
+        <category>algorithms</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Blog init</title>
+        <description>First post — an introduction to what this blog will cover including programming, backpacking, hardware, and more.</description>
+        <pubDate>Sun, 26 Oct 2014 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/2014/10/26/blog-init.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2014/10/26/blog-init.html</guid>
+        
+        <category>first_post</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Post Title</title>
+        <description></description>
+        <pubDate>Sun, 26 Oct 2014 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000/2014/10/26/template.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2014/10/26/template.html</guid>
+        
+        <category>tag</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Smoothcomp_clipping</title>
+        <description>
+</description>
+        <pubDate>Mon, 15 Jun 2026 12:54:30 -0600</pubDate>
+        <link>http://localhost:4000/2026/06/15/smoothcomp_clipping.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2026/06/15/smoothcomp_clipping.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Sauna</title>
+        <description>Sauna build so far could be multiple posts
+
+  Foundation
+  Framing
+  Electrical
+  Insulation
+
+</description>
+        <pubDate>Mon, 15 Jun 2026 12:53:18 -0600</pubDate>
+        <link>http://localhost:4000/2026/06/15/sauna.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2026/06/15/sauna.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Frigate</title>
+        <description>General setup of frigate with new reolink cameras
+</description>
+        <pubDate>Mon, 22 Jun 2026 09:28:05 -0600</pubDate>
+        <link>http://localhost:4000/2026/06/22/frigate.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2026/06/22/frigate.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

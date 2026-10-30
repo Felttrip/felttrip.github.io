@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Judo Testing Prep Website | A Day In The Woods</title>
+
+    
+    <meta name="description" content="Building a static web app to help Colorado judoka prep for dan rank testing — with rank filtering, technique overviews, and a random practice mode.">
+    
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Judo Testing Prep Website">
+    <meta property="og:url" content="http://localhost:4000/2026/06/16/judo-website.html">
+    <meta property="og:site_name" content="A Day In The Woods">
+    
+    <meta property="og:description" content="Building a static web app to help Colorado judoka prep for dan rank testing — with rank filtering, technique overviews, and a random practice mode.">
+    
+    
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Judo Testing Prep Website">
+    
+    <meta name="twitter:description" content="Building a static web app to help Colorado judoka prep for dan rank testing — with rank filtering, technique overviews, and a random practice mode.">
+    
+    
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/2026/06/16/judo-website.html">
+    <link rel="shortcut icon" href="/css/icon.png" />
+</head>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+  await mermaid.run({
+    querySelector: '.language-mermaid',
+  });
+</script>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">A Day In The Woods</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/tags/">Tags</a>
+          
+        
+          
+          <a class="page-link" href="/webring/">Webring</a>
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Judo Testing Prep Website</h1>
+    <p class="post-meta">Jun 16, 2026</p>
+  </header>
+
+  <article class="post-content">
+    <p>I’ve got a couple of friends who are getting ready to test for their Yodan rank in Judo. This is a fourth degree black belt and a pretty big deal IMO. For each higher rank you test for you can be asked about any of the prior content for each rank, so by the time you get you Yodan it can be quite a lot of techniques.</p>
+
+<p>When testing for my Shodan (first degree black belt) I had made a pretty scrappy website to help me with test prep. I decided to iterate on that and make improvements to support up to Yodan.</p>
+
+<p>First the website
+<a href="https://judo.felttrip.com/">judo.felttrip.com</a></p>
+
+<p>The contents of this are sourced from the <a href="https://docs.google.com/document/d/1HRnQP3-AWWF9jWPobojFBpOOrw06FdmvnKbvKH545vk/edit?tab=t.0">2025 CJL Dan Promotion Syllabus</a></p>
+
+<p>Which has a ton of info that can be difficult to grep through.</p>
+
+<p>In addition to making the information generally easier to study by grouping it into the various categories I think these are some of the main improvements over studying from the document.</p>
+
+<h1 id="improvements">Improvements</h1>
+
+<h2 id="filtering">Filtering</h2>
+<p>The first step in making this information more consumable was the ability to filter down to just the rank you were testing for.</p>
+
+<p><img src="/assets/images/judo_website/rank_selector.webp" alt="Screen shot of the ability to select ranks for judo.felttrip.com" /></p>
+
+<p>Adding this makes it so that you can ensure you are focusing on just the techniques that matter.</p>
+
+<h2 id="overview">Overview</h2>
+<p>Next is the overview with new techniques section. I thought being able to see a quick overview of what you had not been tested on would give a good idea of what you needed to focus on.</p>
+
+<p><img src="/assets/images/judo_website/new_tech.webp" alt="Screen shot of the ability to see new techniques on judo.felttrip.com" /></p>
+
+<h2 id="all-required-techniques">All Required Techniques</h2>
+<p>Judo is divided into two main categories of techniques. Nage-waza, throwing techniques, and katame-waza, ground techniques. To ensure that you know all of the prior techniques going to each of these tabs has listed out everything you are expected to know for that rank, including all prior ranks.</p>
+
+<p><img src="/assets/images/judo_website/nage_waza.webp" alt="Screen shot of the nage-waza tab selected on judo.felttrip.com" /></p>
+
+<h2 id="practice">Practice</h2>
+<p>The final important feature in my opinion is the Practice tab. This tab allows you to get a random technique (non repeated) to demonstrate, which is similar to how the actual rank testing would occur. I found during preparing for testing that having it be truly random is much better than having someone try to “randomly” pick one off of a list.</p>
+
+<p><img src="/assets/images/judo_website/practice.webp" alt="Screen shot of the practice page on judo.felttrip.com" /></p>
+
+<h1 id="technical-considerations">Technical Considerations</h1>
+<p>There were a few minor technical constraints that needed to be met for this webapp to make sense.</p>
+
+<ol>
+  <li>Works on a phone</li>
+  <li>Doesn’t take forever to load</li>
+</ol>
+
+<p>That screams static HTML to me so thats what we get here. Trying to distill down the CJL rank testing into an easy to consume webapp has created in my opinion a pretty good resource for Colorado Judoka.</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>A Day In The Woods</li>
+          <li><a href="mailto:nthompson55@gmail.com">nthompson55@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+            <a href="https://github.com/felttrip">
+                <i class="fa fa-github-square fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/thompsonnathaniel">
+                <i class="fa fa-linkedin-square fa-2x"></i>
+            </a>
+            <a href="/feed.xml">
+                <i class="fa fa-rss-square fa-2x"></i>
+            </a>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">
+            Nate Thompson's blog on a variety of topics.
+<br>
+            <i class="fa fa-btc"></i><a href="bitcoin:3HzpgZukKCjpJxkYyETzFFWFPjW52neqYZ?label=A%20Day%20In%20The%20Woods">3HzpgZukKCjpJxkYyETzFFWFPjW52neqYZ</a>
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <script>
+      document.querySelectorAll('img').forEach(img => img.loading = 'lazy');
+    </script>
+
+  </body>
+
+</html>
